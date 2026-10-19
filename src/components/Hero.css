@@ -14,22 +14,22 @@
 }
 
 .chip {
-    display: inline-flexbox;
+    display: inline-flex;
     align-items: center;
-    gap: 9px;
-    padding: 7px 14px;
+    gap: 7px;
+    padding: 7px 9px;
     background: var(--card);
     border-radius: 7px;
-    font-size: 0.95;
-    font-weight: 497;
+    font-size: 0.90;
+    font-weight: 650;
     margin-bottom: 20px;
 }
 
 .chip .dot {
-    width: 8px;
-    height: 8px;
+    width: 3px;
+    height: 10px;
     background: var(--accent);
-    border-radius: 50%;
+    border-radius: 50px;
 }
 s
 .hero h1 {
@@ -39,13 +39,13 @@ s
 
 .tagline {
     font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     color: var(--burgundy); 
     margin: 12px 0; 
 }
 
 .intro {
-    font-size: 1.05rem;
+    font-size: 1.07rem;
     max-width: 470px;
     margin-bottom: 27px;
 }
@@ -88,7 +88,7 @@ s
     object-fit: cover;
     border-radius: 20px;
     border: 6px solid var(--card);
-    box-shadow: 40px 45px 35px  rgba(74, 14, 28, 0.7);
+    box-shadow: 40px 45px 30px  rgba(74, 14, 28, 0.7);
 }
 
 .hero-photo::after {
@@ -103,5 +103,3 @@ s
     border-radius: 7px;
 }
 
-
-/* by god im gonnna die*/
