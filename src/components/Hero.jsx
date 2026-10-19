@@ -18,10 +18,12 @@ function Hero() {
                 </div>
             </div>
 
-            <div className='Hero-photo'>
+            <div className='hero-photo'>
                 
-                <img src="/images/profiles.jpeg" alt="Sainath" />
+                <img src="/images/pfp.jpeg" alt="Sainath" />
             </div>
         </header>
     )
 }
+
+export default Hero
