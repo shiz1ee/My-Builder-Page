@@ -1,6 +1,6 @@
 import { useRef } from "react"
-import { gsap } from "gsap/gsap-core"
-import { SlowMo } from "gsap/all"
+import { gsap } from "gsap"
+import { SlowMo } from "gsap/EasePack"
 import './BubbleButton.css'
 import { useEffect } from "react"
 
@@ -17,8 +17,7 @@ function BubbleButton({href, children}) {
 
     useEffect(() => {
         //say no to potato pc
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
+        
         const ctx = gsap.context(() => {
             const tlc = gsap.utils.toArray('.circle.top-left', root.current)
             const brc = gsap.utils.toArray('.circle.bottom-right', root.current)
@@ -58,7 +57,10 @@ function BubbleButton({href, children}) {
         return () => ctx.revert()
     }, [])
 
-    const play = () => master.current?.restart()
+    const play = () => {
+        console.log('hover!', master.current)
+        master.current?.restart()
+    }
 
     return (
         <span className="bubble" ref={root}>
@@ -69,7 +71,7 @@ function BubbleButton({href, children}) {
                         <feColorMatrix
                             in="blur"
                             mode="matrix"
-                            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 9 -9"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
                             result="goo"
                         />
                         <feComposite in="SourceGraphic" in2="goo" />
