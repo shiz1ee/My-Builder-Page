@@ -1,9 +1,15 @@
 import { useRef } from "react"
+import { gsap } from "gsap/gsap-core"
+import { SlowMo } from "gsap/all"
+import './BubbleButton.css'
+import { useEffect } from "react"
+
+
 
 
 gsap.registerPlugin(SlowMo)
 
-const SLOW = 'slow(0.1, 0.7, false'
+const SLOW = 'slow(0.1, 0.7, false)'
 
 function BubbleButton({href, children}) {
     const root = useRef(null)
@@ -43,7 +49,7 @@ function BubbleButton({href, children}) {
             m.add(tl)
             m.to(blob, {duration: 0.8, scaleY: 1.1 }, 0.1)
             m.add(tl2, 0.2)
-            m.to(blob, {duration: 1.8, scale: 1, ease: '(elastic.out(1.2, 0.4)'}, 1.2)
+            m.to(blob, {duration: 1.8, scale: 1, ease: 'elastic.out(1.2, 0.4)'}, 1.2)
             m.timeScale(2.6)
 
             master.current = m
@@ -63,7 +69,7 @@ function BubbleButton({href, children}) {
                         <feColorMatrix
                             in="blur"
                             mode="matrix"
-                            values="10000 01000 00100 00019 -9"
+                            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 9 -9"
                             result="goo"
                         />
                         <feComposite in="SourceGraphic" in2="goo" />

@@ -63,7 +63,7 @@
 }
 
 .bubble-btn:hover + .bubble-effect .circle,
-.bubbtl-btn:hover + .bubble-effect .blob {
+.bubble-btn:hover + .bubble-effect .blob {
     background: var(--burgundy-dark);
 }
 
