@@ -58,13 +58,12 @@ function BubbleButton({href, children}) {
     }, [])
 
     const play = () => {
-        console.log('hover!', master.current)
         master.current?.restart()
     }
 
     return (
         <span className="bubble" ref={root}>
-            <svg className="goo" xmins="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg className="goo" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
                     <filter id="goo">
                         <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
