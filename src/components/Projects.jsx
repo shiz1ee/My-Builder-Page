@@ -6,8 +6,8 @@ const projects = [
         description: 'A cozy pixel-art cafe ordering system. Browse the menu book, fill up ur tray, send the order!',
         tags: ['React', 'Vite'],
         image: '/images/projects/cafe.png',
-        live: '',
-        github: '',
+        live: 'https://cafe-of-elysium.vercel.app',
+        github: 'https://github.com/shiz1ee/Cafe-of-Elysium',
         featured: true,
     },
     {
@@ -15,32 +15,32 @@ const projects = [
         description: 'A 2D platformer built with Godot 4. Play as a cat navigating handcrafted levels, collecting coins, and dodging patrolling slime across multiple stages',
         tags: ['godot'],
         image: '/images/projects/cat.png',
-        live: '',
-        github: '',
+        live: 'https://sainath-shinde.itch.io/save-the-cat',
+        github: 'https://github.com/shiz1ee/SaveTheCat',
     },
     {
         title: 'Music Player',
         description: 'A dark-red, browser based usic player build with HTML, CSS and javaScript, play the built-in songs or either load a folder of MP#s from your device as a playlist.',
         tags: ['CSS', 'HTML5', 'JS'],
         image: '/images/projects/player.png',
-        live: '',
-        github: '',
+        live: 'https://music-player-shiz1ee.vercel.app',
+        github: 'https://github.com/shiz1ee/Music-player',
     },
     {
         title: 'Minecraft Mod',
         description: 'An Alien/Cosmic themed minecraft mod made for neoforge 26.2 which adds custom items/blocks/ores which has some lore behind it, and bunch of food items',
         tags: ['Java: JDK 25', 'Neoforge 1.21+'],
         image: '/images/projects/mod.png',
-        live: '',
-        github: '',
+        live: 'https://github.com/shiz1ee/Minecraft-Mod/releases',
+        github: 'https://github.com/shiz1ee/Minecraft-Mod',
     },
     {
         title: 'SafePath',
         description: 'An offline-first safety map. People can pin unsafe or safe spots (poor lighting, isolated stretches, harassment, theft, well-lit areas) with no signal and no account. Everything is saved on the device first and syncs safely when connectivity returns. If two people edit the same pin offline, the app detects it and asks the user to decide, so nothing is silently overwritten.',
         tags: ['React', 'Vite'],
         image: '/images/projects/safepath.png',
-        live: '',
-        github: '',
+        live: 'https://safepath-psi.vercel.app',
+        github: 'https://github.com/shiz1ee/Safepath',
     },
 ]
 
@@ -50,7 +50,7 @@ function Projects() {
             <h2 className='section-title'>Projects</h2>
 
             <div className='projects-grid'>
-                {projects.mod((p) => (
+                {projects.map((p) => (
                     <article
                         key={p.title}
                         className={p.featured ? 'project-card featured' : 'project-card'}
