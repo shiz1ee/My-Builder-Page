@@ -1,4 +1,5 @@
 import './Hero.css'
+import BubbleButton from './BubbleButton'
 
 function Hero() {
     return (
@@ -13,7 +14,7 @@ function Hero() {
                     I'm learning C++ and full-stack development, and I like picking projects I have no idea on How to build, because figuring it out is the best part. My goal is to become an Indie game developer.
                 </p>
                 <div className='hero-buttons'>
-                    <a href="#projects" className='btn btn-primary'>Check out my projects</a>
+                    <BubbleButton href="#projects">Check out my project</BubbleButton>
                     <a href="https://github.com/shiz1ee" className='btn btn-outline'>Github</a>
                 </div>
             </div>

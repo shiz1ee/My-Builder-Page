@@ -1,0 +1,79 @@
+.bubble {
+    position: relative;
+    display: inline-block;
+}
+
+.bubble-btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 14px 24px;
+    color: var(--card);
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    transition: transform 0.2s ease-out;
+}
+
+.bubble-btn:active {
+    transform: scale(0.97);
+}
+
+.bubble-effect {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    filter: url('#goo');
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+}
+
+.circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    transition: background 0.1s ease-out;
+}
+
+.circle.top-left {
+    top:40%;
+    left: 27%;
+}
+
+.circle.bottom-right {
+    bottom: 40%;
+    right: 27%;
+}
+
+.blob {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    background: var(--burgundy);
+    border-radius: 11px;
+    transition: background 0.1s ease-out;
+}
+
+.bubble-btn:hover + .bubble-effect .circle,
+.bubbtl-btn:hover + .bubble-effect .blob {
+    background: var(--burgundy-dark);
+}
+
+.bubble-btn:active + .bubble-effect {
+    transform: scale(0.95);
+}
+
+.goo {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
