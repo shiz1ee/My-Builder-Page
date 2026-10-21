@@ -30,22 +30,20 @@ function Footer() {
     return (
         <footer id='contact' className='footer'>
                 <p className='wordmark'>Sainath Shinde</p>
-                <div className='contact-list'>
+                <div className='footer-card'>
                     {links.map((l) => (
                         <a
                         key={l.label}
                         href={l.href}
-                        className="contact-row"
+                        className="footer-link"
                         {...(l.external && {
                             target: '_blank',
                             rel: 'noopener noreferrer',
                         })}
                         >
                         
-                        <span className="row-label">{l.label}</span>
-                        <span className="row-line"></span>
-                        <span className="row-handle">{l.handle}</span>
-                        <span className="row-arow">↗</span>
+                        <span className="footer-label">{l.label}</span>
+                        <span className="footer-handle">{l.handle}</span>
                         </a>
                     ))}
                 </div>
