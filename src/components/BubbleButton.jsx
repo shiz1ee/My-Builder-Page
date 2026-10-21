@@ -3,11 +3,11 @@ import { gsap } from "gsap"
 import { SlowMo } from "gsap/EasePack"
 import './BubbleButton.css'
 import { useEffect } from "react"
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 
 
 
-
-gsap.registerPlugin(SlowMo)
+gsap.registerPlugin(SlowMo, ScrollToPlugin)
 
 const SLOW = 'slow(0.1, 0.7, false)'
 
@@ -61,6 +61,15 @@ function BubbleButton({href, children}) {
         master.current?.restart()
     }
 
+    const go = (e) => {
+    e.preventDefault()
+    gsap.to(window, {
+        duration: 0.8,
+        scrollTo: { y: href, offsetY: 100 },
+        ease: 'power2.inOut',
+    })
+} //since i already know ts im gonna paste it 
+
     return (
         <span className="bubble" ref={root}>
             <svg className="goo" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -78,7 +87,7 @@ function BubbleButton({href, children}) {
                 </defs>
             </svg>
 
-            <a href={href} className="bubble-btn" onPointerEnter={play}>
+            <a href={href} className="bubble-btn" onPointerEnter={play} onClick={go}>
                 {children}
             </a>
             <span className="bubble-effect" aria-hidden="true">
