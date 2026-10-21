@@ -29,33 +29,30 @@ const links = [
 function Footer() {
     return (
         <footer id='contact' className='footer'>
-            <div className='footer-card'>
-                <h2>Let's talk</h2>
-                <p>
-                    Want to build something together, or just say hi? I'm around on these.
-                </p>
-
-                <div className='footer-links'>
+                <p className='wordmark'>Sainath Shinde</p>
+                <div className='contact-list'>
                     {links.map((l) => (
                         <a
                         key={l.label}
                         href={l.href}
-                        className="footer-link"
+                        className="contact-row"
                         {...(l.external && {
                             target: '_blank',
                             rel: 'noopener noreferrer',
                         })}
                         >
-                        <span className="footer-label">{l.label}</span>
-                        <span className="footer-handle">{l.handle} ↗</span>
+                        
+                        <span className="row-label">{l.label}</span>
+                        <span className="row-line"></span>
+                        <span className="row-handle">{l.handle}</span>
+                        <span className="row-arow">↗</span>
                         </a>
                     ))}
                 </div>
-            </div>
-
-            <p className='footer-credit'>
-                <span className='dot'></span> Built by Sainath with React + Vite
-            </p>
+                    
+                <p className='footer-credit'>
+                    <span className='dot'></span> Built by Sainath with React + Vite
+                </p>
         </footer>
     )
 }

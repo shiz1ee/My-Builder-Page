@@ -15,7 +15,7 @@ function Hero() {
                 </p>
                 <div className='hero-buttons'>
                     <BubbleButton href="#projects">Check out my project</BubbleButton>
-                    <a href="https://github.com/shiz1ee" className='btn btn-outline'>Github</a>
+                    <a href="https://github.com/shiz1ee" className='btn btn-outline' target='_blank' rel='noopener noreferrer'>Github</a>
                 </div>
             </div>
 
